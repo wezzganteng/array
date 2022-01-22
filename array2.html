@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Cara Memasukan Nilai Kedalam Array Kosong Melalui Prompt JavaScript</title>
+	<style>
+		body {
+			font-family: sans-serif;
+			margin: 10%
+		}
+		li { margin: 5px 0 }
+	</style>
+</head>
+ 
+<body>
+	<h3>Daftar BUAH</h3>
+	<ol class="tampil"></ol>
+</body>
+</html>
+ 
+<script>
+var array_kosong = [];
+var i = 0;
+var html = '';
+	while (i < 10) {    		
+		array_kosong[i] = prompt('Masukan Nama BUAH ?', '');
+		array_kosong.push(array_kosong[i]);
+		i++;
+	}
+	for (var j=0; j < array_kosong.length-1; j++) {
+	      html += '<li>' + array_kosong[j] + '</li>';
+	}
+    document.getElementsByClassName('tampil')[0].innerHTML = html;
+</script>
